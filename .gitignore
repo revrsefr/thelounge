@@ -7,3 +7,14 @@ package-lock.json
 coverage/
 public/
 dist/
+
+# User data — per-instance, sensitive
+data/users/
+data/logs/
+data/uploads/
+data/storage/
+data/packages/
+data/vapid.json
+data/config.js
+data/themes/
+docker-compose.yml

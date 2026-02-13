@@ -1,0 +1,402 @@
+@import "default.css";
+
+/* IRC4Fun — The Lounge Theme
+ * Dark theme based on the IRC4Fun brand palette.
+ * Primary: #0076f9  Accent: #7c3aed  Success: #0d9488
+ */
+
+:root {
+	--body-color: #e4e7eb;
+	--body-color-muted: #94a3b8;
+	--body-bg-color: #0f1115;
+	--button-color: #0076f9;
+	--button-text-color-hover: #fff;
+	--overlay-bg-color: #000000cc;
+	--link-color: #5aa5ff;
+	--window-bg-color: #1a1e25;
+	--window-heading-color: #94a3b8;
+	--date-marker-color: #0d948880;
+	--unread-marker-color: #e74c3c80;
+	--highlight-bg-color: #1a2a40;
+	--highlight-border-color: #0076f9;
+	--upload-progressbar-color: #0076f9;
+}
+
+body {
+	scrollbar-color: rgb(255 255 255 / 15%) rgb(0 0 0 / 10%);
+}
+
+/* Sidebar */
+#sidebar {
+	background: #0f1115;
+}
+
+#sidebar .empty {
+	color: #94a3b8;
+}
+
+.channel-list-item[data-type="lobby"] {
+	color: #0076f9;
+}
+
+.channel-list-item[data-type="lobby"].active,
+.channel-list-item[data-type="lobby"]:hover {
+	color: #5aa5ff;
+}
+
+.channel-list-item .badge {
+	background: rgba(0, 118, 249, 0.15);
+	color: #5aa5ff;
+}
+
+.channel-list-item .badge.highlight {
+	background: #0076f9;
+	color: #fff;
+}
+
+#footer button.active,
+#footer button:hover,
+.channel-list-item.active,
+.channel-list-item:hover {
+	color: #fff;
+}
+
+#footer button:hover,
+.channel-list-item:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+#footer button.active,
+.channel-list-item.active {
+	background-color: rgba(0, 118, 249, 0.12);
+}
+
+#footer button {
+	color: #94a3b8;
+}
+
+/* Window / Chat area */
+.window {
+	box-shadow: 0 0 25px rgb(0 0 0 / 75%);
+}
+
+#chat .header {
+	border-bottom-color: #2a2f38;
+}
+
+/* Inverted logo for dark backgrounds */
+#loading .logo,
+.window .logo {
+	display: none;
+}
+
+#loading .logo-inverted,
+.window .logo-inverted {
+	display: inline-block;
+}
+
+/* Userlist */
+#chat .userlist {
+	border-left-color: #2a2f38;
+}
+
+#chat .userlist .count {
+	background-color: #14171e;
+}
+
+#chat .count::before {
+	color: #94a3b8;
+}
+
+#chat .userlist .user.active {
+	background-color: rgba(0, 118, 249, 0.1);
+}
+
+/* Borders */
+#chat .content {
+	border-left-color: #2a2f38;
+}
+
+#chat .user-mode::before {
+	border-color: #2a2f38;
+}
+
+/* Nicknames */
+.user {
+	color: #94a3b8;
+}
+
+.user.color-1  { color: #5aa5ff; }
+.user.color-2  { color: #7c3aed; }
+.user.color-3  { color: #14b8a6; }
+.user.color-4  { color: #f7adf7; }
+.user.color-5  { color: #f9a4b3; }
+.user.color-6  { color: #a8b8ff; }
+.user.color-7  { color: #86efdc; }
+.user.color-8  { color: #abf99f; }
+.user.color-9  { color: #85a7e3; }
+.user.color-10 { color: #c890eb; }
+.user.color-11 { color: #b695fc; }
+.user.color-12 { color: #f4aead; }
+.user.color-13 { color: #fc7cb1; }
+.user.color-14 { color: #ff72e0; }
+.user.color-15 { color: #8cb6ea; }
+.user.color-16 { color: #f9857c; }
+.user.color-17 { color: #ed9b82; }
+.user.color-18 { color: #8df484; }
+.user.color-19 { color: #ffcce3; }
+.user.color-20 { color: #efcc81; }
+.user.color-21 { color: #92a2ed; }
+.user.color-22 { color: #f4d484; }
+.user.color-23 { color: #97ea70; }
+.user.color-24 { color: #fcbbba; }
+.user.color-25 { color: #eef975; }
+.user.color-26 { color: #c7ff93; }
+.user.color-27 { color: #ffade1; }
+.user.color-28 { color: #98ecf2; }
+.user.color-29 { color: #91a2f5; }
+.user.color-30 { color: #b19aea; }
+.user.color-31 { color: #f2a4eb; }
+.user.color-32 { color: #85f27d; }
+
+/* IRC colors — increase contrast for dark bg */
+.irc-fg2  { color: #5aa5ff; }
+.irc-fg5  { color: #e969a7; }
+.irc-fg12 { color: #50a8ff; }
+.irc-fg14 { color: #94a3b8; }
+.irc-fg15 { color: #cbd5e1; }
+
+/* Highlight */
+#chat .chat-view[data-type="channel"] .msg.highlight .time {
+	color: #e4e7eb;
+}
+
+#chat .chat-view[data-type="channel"] .msg.highlight .content {
+	border-left-color: var(--highlight-bg-color);
+}
+
+/* Message form */
+#form {
+	background-color: #14171e;
+	border-color: #2a2f38;
+	color: var(--body-color);
+}
+
+#form #nick {
+	background: #0f1115;
+	color: #e4e7eb;
+}
+
+#form #input {
+	color: #e4e7eb;
+}
+
+#form #submit,
+#form #upload {
+	color: #94a3b8;
+}
+
+/* Header buttons */
+#viewport .lt,
+#viewport .rt,
+#chat button.mentions,
+#chat button.menu,
+#chat button.close,
+#chat button.search {
+	color: #94a3b8;
+}
+
+/* Search form */
+form.message-search input {
+	background-color: #14171e;
+	color: #e4e7eb;
+}
+
+#chat form.message-search button {
+	color: #94a3b8;
+}
+
+/* Embeds */
+#chat .toggle-content {
+	background: #14171e;
+	color: #e4e7eb;
+}
+
+#chat .toggle-content .body {
+	color: #94a3b8;
+}
+
+/* Error messages */
+#chat .msg[data-type="error"],
+#chat .msg[data-type="error"] .from {
+	color: #f87171;
+}
+
+/* Code / monospace */
+#chat .msg[data-type="monospace_block"] .text,
+code,
+.irc-monospace {
+	background: #14171e;
+	color: #e4e7eb;
+}
+
+/* Kbd */
+kbd {
+	color: #eee;
+	text-shadow: 0 -1px 0 #000;
+	border-color: #000;
+	background-color: #1a1e25;
+	background-image: linear-gradient(rgb(0 0 0 / 25%), transparent);
+	box-shadow: 0 2px 0 #000, inset 0 1px 1px #444, inset 0 -1px 3px #111;
+}
+
+/* Tables */
+#chat table.channel-list td,
+#chat table.channel-list th,
+#chat table.ban-list td,
+#chat table.ban-list th {
+	border-bottom-color: #2a2f38;
+}
+
+/* Form inputs */
+.input {
+	background-color: #14171e;
+	border-color: #2a2f38;
+	color: #e4e7eb;
+}
+
+.input:not(:disabled):focus,
+.input:not(:disabled):hover {
+	border-color: #0076f9;
+}
+
+/* Buttons */
+.btn {
+	border-color: #0076f9;
+	color: #0076f9;
+}
+
+.btn:disabled,
+.btn:focus,
+.btn:hover {
+	background: #0076f9;
+	color: #fff;
+}
+
+/* Row stripes */
+#chat .msg[data-type="monospace_block"] .text {
+	background: #14171e;
+}
+
+/* Scrollbar inside chat */
+#chat .chat {
+	scrollbar-color: rgb(255 255 255 / 15%) transparent;
+}
+
+/* Placeholders */
+/* stylelint-disable selector-no-vendor-prefix */
+#chat-container ::-moz-placeholder {
+	color: #94a3b8;
+	opacity: 0.75;
+}
+
+#chat-container ::-webkit-input-placeholder {
+	color: #94a3b8;
+	opacity: 0.75;
+}
+
+#chat-container :-ms-input-placeholder {
+	color: #94a3b8;
+	opacity: 0.75;
+}
+/* stylelint-enable selector-no-vendor-prefix */
+
+/* Context menu */
+#context-menu,
+.textcomplete-menu,
+.mentions-popup {
+	background-color: #1a1e25;
+	border-color: #2a2f38;
+}
+
+.context-menu-item,
+.textcomplete-item {
+	color: #e4e7eb;
+}
+
+.context-menu-item.active,
+.textcomplete-item:focus,
+.textcomplete-item:hover,
+.textcomplete-menu .active {
+	background-color: rgba(0, 118, 249, 0.15);
+}
+
+.context-menu-divider {
+	background-color: #2a2f38;
+}
+
+/* Settings panels */
+#settings .settings-sync-panel {
+	background-color: rgba(0, 118, 249, 0.1);
+	color: #5aa5ff;
+}
+
+#version-checker.loading {
+	background-color: rgba(0, 118, 249, 0.1);
+	color: #5aa5ff;
+}
+
+#version-checker.new-packages,
+#version-checker.new-version {
+	background-color: rgba(255, 193, 7, 0.1);
+	color: #fbbf24;
+}
+
+#version-checker.error {
+	background-color: rgba(239, 68, 68, 0.1);
+	color: #f87171;
+}
+
+#version-checker.up-to-date {
+	background-color: rgba(13, 148, 136, 0.1);
+	color: #14b8a6;
+}
+
+/* Viewport border for lt:after notification dot */
+#viewport .lt:after {
+	border-color: #0f1115;
+}
+
+/* Jump-to / search input in sidebar */
+.jump-to-input .input {
+	background-color: rgba(255, 255, 255, 0.08);
+	color: #e4e7eb;
+}
+
+/* Confirm dialog */
+#confirm-dialog {
+	background: #1a1e25;
+}
+
+#confirm-dialog .confirm-buttons {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/* Action messages */
+#chat .msg[data-type="action"] .content,
+#chat .msg[data-type="action"] .from,
+#chat .msg[data-type="action"] .user {
+	color: #fbbf24;
+}
+
+/* Notice messages */
+#chat .msg[data-type="notice"] .content,
+#chat .msg[data-type="notice"] .time,
+#chat .msg[data-type="notice"] .user {
+	color: #5aa5ff;
+}
+
+/* User error notification */
+#user-visible-error {
+	background: #dc2626;
+}
