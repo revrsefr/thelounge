@@ -3,7 +3,7 @@
 	<head>
 
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="viewport" content="width=device-width, user-scalable=no, interactive-widget=resizes-content">
 
 	<link rel="preload" as="script" href="js/loading-error-handlers.js?v=<%- cacheBust %>">
 	<link rel="preload" as="script" href="js/bundle.vendor.js?v=<%- cacheBust %>">
@@ -24,7 +24,7 @@
 	<!-- Safari pinned tab icon -->
 	<link rel="mask-icon" href="img/icon-black-transparent-bg.svg" color="#415364">
 
-	<link rel="manifest" href="thelounge.webmanifest">
+	<link rel="manifest" href="thelounge.webmanifest" crossorigin="use-credentials">
 
 	<!-- iPhone 4, iPhone 4s, iPhone 5, iPhone 5c, iPhone 5s, iPhone 6, iPhone 6s, iPhone 7, iPhone 7s, iPhone8 -->
 	<link rel="apple-touch-icon" sizes="120x120" href="img/logo-grey-bg-120x120px.png">
